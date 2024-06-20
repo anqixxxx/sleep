@@ -91,6 +91,10 @@
     .btn:hover {
       background-color: #001a33;
     }
+
+    .analysis-container {
+      display: none;
+    }
   </style>
 </head>
 
@@ -126,28 +130,7 @@
     </div>
   </div>
 
-  <style>
-  .cloud {
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #003366;
-    margin-bottom: 20px;
-    color: white;
-  }
-  </style>
-
-  <style>
-  .cloud a {
-    color: #FFD700; /* Gold color for better visibility */
-  }
-    
-  .cloud a:visited {
-    color: #FFD700; /* Gold color for visited links */
-  }
-  </style>
-
-  <div id="sleepAnalysis1" style="display: none;">
+  <div id="sleepAnalysis1" class="analysis-container">
     <div class="container">
       <div class="header">
         <h1>Great Sleep!</h1>
@@ -155,39 +138,40 @@
       </div>
       <div class="content">
         <div class="cloud">
-            <h2 id="user-sleep-hours1">You slept for 8 hours</h2>
-            <p>Your sleep quality score is 9/10.</p>
+          <h2 id="user-sleep-hours1">You slept for 8 hours</h2>
+          <p>Your sleep quality score is 9/10.</p>
         </div>
         <div class="cloud">
-            <p>Good sleep patterns contribute to better overall health, improved mood, and enhanced cognitive function.</p>
+          <p>Good sleep patterns contribute to better overall health, improved mood, and enhanced cognitive function.</p>
         </div>
         <div class="cloud">
-            <h2>Tips to Maintain Good Sleep:</h2>
-            <p>1. Keep a consistent sleep schedule.</p>
-            <p>2. Create a relaxing bedtime routine.</p>
-            <p>3. Ensure your sleep environment is comfortable and free from disruptions.</p>
-            <p>4. Limit exposure to screens before bedtime.</p>
+          <h2>Tips to Maintain Good Sleep:</h2>
+          <p>1. Keep a consistent sleep schedule.</p>
+          <p>2. Create a relaxing bedtime routine.</p>
+          <p>3. Ensure your sleep environment is comfortable and free from disruptions.</p>
+          <p>4. Limit exposure to screens before bedtime.</p>
         </div>
         <div class="cloud">
-            <h2>Learn More About Sleep Health:</h2>
-            <p>Visit <a href="https://www.healthline.com/nutrition/17-tips-to-sleep-better" target="_blank">"17 Tips to Sleep Better at Night"</a> for more information.</p>
+          <h2>Learn More About Sleep Health:</h2>
+          <p>Visit <a href="https://www.healthline.com/nutrition/17-tips-to-sleep-better" target="_blank">"17 Tips to Sleep Better at Night"</a> for more information.</p>
         </div>
-      <div class="cloud">
-        <a href="#" class="btn">Keep Tracking Your Sleep</a>
-      </div>
-      <div class="testimonials">
-        <h2>Sleep Success Stories</h2>
-        <div class="testimonial">
-          <p>"Tracking my sleep with PulsePals has significantly improved my rest!" - John Doe</p>
+        <div class="cloud">
+          <a href="#" class="btn">Keep Tracking Your Sleep</a>
         </div>
-        <div class="testimonial">
-          <p>"I've learned so much about my sleep patterns and how to improve them." - Jane Smith</p>
+        <div class="testimonials">
+          <h2>Sleep Success Stories</h2>
+          <div class="testimonial">
+            <p>"Tracking my sleep with PulsePals has significantly improved my rest!" - John Doe</p>
+          </div>
+          <div class="testimonial">
+            <p>"I've learned so much about my sleep patterns and how to improve them." - Jane Smith</p>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
-  <div id="sleepAnalysis2" style="display: none;">
+  <div id="sleepAnalysis2" class="analysis-container">
     <div class="container">
       <div class="header">
         <h1>Improve Your Sleep</h1>
@@ -195,33 +179,34 @@
       </div>
       <div class="content">
         <div class="cloud">
-            <h2 id="user-sleep-hours2">You slept for 5 hours</h2>
-            <p>Your sleep quality score is 5/10.</p>
+          <h2 id="user-sleep-hours2">You slept for 5 hours</h2>
+          <p>Your sleep quality score is 5/10.</p>
         </div>
         <div class="cloud">
-            <p>Improving your sleep can lead to better health, mood, and productivity.</p>
+          <p>Improving your sleep can lead to better health, mood, and productivity.</p>
         </div>
         <div class="cloud">
-            <h2>Tips to Improve Your Sleep:</h2>
-            <p>1. Maintain a regular sleep schedule, even on weekends.</p>
-            <p>2. Create a calming pre-sleep routine, such as reading or taking a warm bath.</p>
-            <p>3. Make your bedroom a sleep-friendly environment: dark, quiet, and cool.</p>
-            <p>4. Avoid caffeine and heavy meals close to bedtime.</p>
+          <h2>Tips to Improve Your Sleep:</h2>
+          <p>1. Maintain a regular sleep schedule, even on weekends.</p>
+          <p>2. Create a calming pre-sleep routine, such as reading or taking a warm bath.</p>
+          <p>3. Make your bedroom a sleep-friendly environment: dark, quiet, and cool.</p>
+          <p>4. Avoid caffeine and heavy meals close to bedtime.</p>
         </div>
         <div class="cloud">
-            <h2>Learn More About Improving Sleep:</h2>
-            <p>Check out this article on <a href="https://www.sleepfoundation.org/sleep-hygiene" target="_blank">"Sleep Hygiene Practices"</a> for more tips.</p>
+          <h2>Learn More About Improving Sleep:</h2>
+          <p>Check out this article on <a href="https://www.sleepfoundation.org/sleep-hygiene" target="_blank">"Sleep Hygiene Practices"</a> for more tips.</p>
         </div>
-      <div class="cloud">
-        <a href="#" class="btn">Track Your Sleep Again</a>
-      </div>
-      <div class="testimonials">
-        <h2>Community Tips</h2>
-        <div class="testimonial">
-          <p>"PulsePals' tips helped me improve my sleep quality over time." - John Doe</p>
+        <div class="cloud">
+          <a href="#" class="btn">Track Your Sleep Again</a>
         </div>
-        <div class="testimonial">
-          <p>"Understanding my sleep patterns has been a game-changer for my health." - Jane Smith</p>
+        <div class="testimonials">
+          <h2>Community Tips</h2>
+          <div class="testimonial">
+            <p>"PulsePals' tips helped me improve my sleep quality over time." - John Doe</p>
+          </div>
+          <div class="testimonial">
+            <p>"Understanding my sleep patterns has been a game-changer for my health." - Jane Smith</p>
+          </div>
         </div>
       </div>
     </div>
@@ -230,27 +215,33 @@
   <script>
     document.getElementById('sleepForm').addEventListener('submit', function (e) {
       e.preventDefault();
-      
+
       const sleepHours = parseInt(document.getElementById('sleepHours').value);
       const sleepQuality = parseInt(document.getElementById('sleepQuality').value);
       const wakeTimes = parseInt(document.getElementById('wakeTimes').value);
       const difficultySleeping = parseInt(document.getElementById('difficultySleeping').value);
       const notes = document.getElementById('notes').value;
 
-      // Hide the form
-      document.querySelector('.form-container').style.display = 'none';
+      // Hide previous analysis if any
+      document.getElementById('sleepAnalysis1').style.display = 'none';
+      document.getElementById('sleepAnalysis2').style.display = 'none';
 
-      
       // Basic sleep analysis logic
-      if (sleepHours >= 7 && sleepHours <= 9 && sleepQuality >= 7 && wakeTimes <= 1 && difficultySleeping <= 3) {
+      if (sleepHours >= 7 && sleepQuality >= 7 && wakeTimes <= 1 && difficultySleeping <= 3) {
+        // Good sleep analysis
         document.getElementById('sleepAnalysis1').style.display = 'block';
-        document.getElementById('user-sleep-hours1').innerText = `You slept for ${sleepHours} hours`;
+        document.getElementById('user-sleep-hours1').textContent = `You slept for ${sleepHours} hours`;
       } else {
+        // Poor sleep analysis
         document.getElementById('sleepAnalysis2').style.display = 'block';
-        document.getElementById('user-sleep-hours2').innerText = `You slept for ${sleepHours} hours`;
+        document.getElementById('user-sleep-hours2').textContent = `You slept for ${sleepHours} hours`;
       }
+
+      // Clear form inputs after submission
+      document.getElementById('sleepForm').reset();
     });
   </script>
 </body>
 
 </html>
+
