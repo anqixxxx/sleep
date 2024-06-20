@@ -318,7 +318,12 @@
       const notes = document.getElementById('notes').value;
       const totalScore = sleepHoursScore(sleepHours) + sleepQualityScore(sleepQuality) + wakeTimesScore(wakeTimes) + difficultySleepingScore(difficultySleeping);
 
-
+      // Validation Check
+      if (sleepHours < 0 || sleepHours > 24) {
+        alert('Please enter a valid number of sleep hours (0-24).');
+        return;
+      }
+      
       // Hide previous analysis if any
       document.getElementById('sleepAnalysis1').style.display = 'none';
       document.getElementById('sleepAnalysis2').style.display = 'none';
