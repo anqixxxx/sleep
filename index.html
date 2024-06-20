@@ -236,6 +236,10 @@
       const wakeTimes = parseInt(document.getElementById('wakeTimes').value);
       const difficultySleeping = parseInt(document.getElementById('difficultySleeping').value);
       const notes = document.getElementById('notes').value;
+
+      // Hide the form
+      document.querySelector('.form-container').style.display = 'none';
+
       
       // Basic sleep analysis logic
       if (sleepHours >= 7 && sleepHours <= 9 && sleepQuality >= 7 && wakeTimes <= 1 && difficultySleeping <= 3) {
