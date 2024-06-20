@@ -98,6 +98,7 @@
   </style>
 </head>
 
+
 <body>
   <div class="container">
     <div class="header">
@@ -113,14 +114,39 @@
           <input type="number" id="sleepHours" name="sleepHours" required><br><br>
 
           <label for="sleepQuality">Quality of Sleep (1-10):</label>
-          <input type="number" id="sleepQuality" name="sleepQuality" min="1" max="10" required><br><br>
+          <input type="number" id="sleepQuality" name="sleepQuality" min="1" max="10" required><br>
+          <a href="#" id="elaborationLink">Click here for elaboration</a>
+          <div id="elaboration" style="display: none;">
+            <p>1-3: Very poor<br>
+            Significant disruptions or discomfort throughout the night</p>
+            <p>4-6: Poor<br>
+            Noticeable disturbances or difficulties that impact overall restfulness</p>
+            <p>7-8: Good<br>
+            Satisfactory sleep quality, where the user experiences restful sleep with minimal disturbances</p>
+            <p>9-10: Excellent<br>
+            Optimal sleep quality, where the user experiences uninterrupted, deeply restorative sleep</p>
+          </div>
+          <br><br>
 
           <label for="wakeTimes">Number of Times You Woke Up:</label>
           <input type="number" id="wakeTimes" name="wakeTimes" required><br><br>
 
-          <label for="difficultySleeping">Difficulty Falling Asleep (1-10):</label>
-          <input type="number" id="difficultySleeping" name="difficultySleeping" min="1" max="10" required><br><br>
-
+          <label for="difficultySleeping">Difficulty Falling Asleep (1-5):</label>
+          <input type="number" id="difficultySleeping" name="difficultySleeping" min="1" max="5" required><br><br>
+          <a href="#" id="difficultyElaborationLink">Click here for elaboration</a>
+          <div id="difficultyElaboration" style="display: none;">
+          <p>1: Not difficult at all<br>
+          Example: You drifted off within a few minutes of getting into bed.</p>
+          <p>2: Slightly difficult<br>
+          Example: It took a little longer than usual to fall asleep, about 5-10 minutes of restlessness.</p>
+          <p>3: Moderately difficult<br>
+          Example: You tossed and turned for some time before finally falling asleep, around 15-30 minutes.</p>
+          <p>4: Very difficult<br>
+          Example: You struggled to relax and initiate sleep, taking about 30-45 minutes.</p>
+          <p>5: Extremely difficult<br>
+          Example: You were awake for a prolonged period, unable to fall asleep despite trying, for over an hour.</p>
+          </div>
+          
           <label for="notes">Additional Notes:</label>
           <textarea id="notes" name="notes" rows="4" placeholder="Any additional comments or observations..."></textarea><br><br>
 
@@ -129,6 +155,27 @@
       </div>
     </div>
   </div>
+
+  <style>
+    .cloud {
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #003366;
+      margin-bottom: 20px;
+      color: white;
+    }
+  </style>
+  
+  <style>
+    .cloud a {
+      color: #FFD700; /* Gold color for better visibility */
+    }
+      
+    .cloud a:visited {
+      color: #FFD700; /* Gold color for visited links */
+    }
+  </style>
 
   <div id="sleepAnalysis1" class="analysis-container">
     <div class="container">
@@ -213,6 +260,26 @@
   </div>
 
   <script>
+    document.getElementById('elaborationLink').addEventListener('click', function(e) {
+      e.preventDefault();
+      var elaborationDiv = document.getElementById('elaboration');
+      if (elaborationDiv.style.display === 'none') {
+          elaborationDiv.style.display = 'block';
+      } else {
+          elaborationDiv.style.display = 'none';
+      }
+    });
+
+    document.getElementById('difficultyElaborationLink').addEventListener('click', function(e) {
+      e.preventDefault();
+      var difficultyElaborationDiv = document.getElementById('difficultyElaboration');
+      if (difficultyElaborationDiv.style.display === 'none') {
+          difficultyElaborationDiv.style.display = 'block';
+      } else {
+          difficultyElaborationDiv.style.display = 'none';
+      }
+    });
+
     document.getElementById('sleepForm').addEventListener('submit', function (e) {
       e.preventDefault();
 
@@ -244,4 +311,3 @@
 </body>
 
 </html>
-
