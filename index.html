@@ -1,96 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script defer src="/_vercel/insights/script.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css"
-    />
-    <title>Vercel HTML Starter</title>
-    <meta
-      name="description"
-      content="High-performance HTML based website template."
-    />
-  </head>
-  <body>
-    <h1>Vercel HTML Starter</h1>
-    <p>
-      This template is a simple, but powerful single
-      <code>index.html</code> file deployed to
-      <a href="https://vercel.com">Vercel</a>. When your site is deployed, all
-      static assets (like HTML, JavaScript, CSS, images, and more) are deployed
-      globally to every
-      <a href="https://vercel.com/docs/concepts/edge-network/overview"
-        >Vercel Edge Network</a
-      >
-      region.
-    </p>
-    <h2>Simple, privacy-friendly analytics</h2>
-    <p>
-      Want to understand your visitor traffic? Vercel Analytics gives you
-      first-party, privacy-friendly traffic analytics for your HTML site. This
-      template is already configured using the following script:
-    </p>
-    <pre><code>&lt;script defer src="/_vercel/insights/script.js"&gt;&lt;/script&gt;</code></pre>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/analytics">Vercel Analytics</a>.
-    </p>
-    <h2>Integrated with git</h2>
-    <p>
-      Deploying updates to your site is as simple as
-      <code>git push</code> thanks to Vercel's advanced
-      <a href="https://vercel.com/docs/concepts/git">Git Integration</a>.
-      Support for GitHub, GitLab, Bitbucket is zero-configuration, and with the
-      flexible Vercel CLI and API, you can integrate with any tool possible.
-    </p>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/git">Git Integration</a>.
-    </p>
-    <h2>Fast <code>gzip</code> compression</h2>
-    <p>
-      To help ensure the smallest possible file sizes for your static assets,
-      the Vercel Edge Network compresses files by default using
-      <code>gzip</code>. You can also optionally use
-      <code>brotli</code> compressesion if you prefer.
-    </p>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/edge-network/compression"
-        >compression</a
-      >.
-    </p>
-    <h2>Advanced routing configuration</h2>
-    <p>
-      Vercel gives you a variety of ways to configure the routing of your
-      website. For example, adding redirects, rewrites, or headers to your page.
-      While you can use <code>vercel.json</code> to define these through JSON,
-      you can also express your routing configuration as code using
-      <a href="https://vercel.com/docs/concepts/functions/edge-middleware"
-        >Vercel Edge Middleware</a
-      >.
-    </p>
-    <p>
-      Middleware runs before the
-      <a href="https://vercel.com/docs/concepts/edge-network/caching"
-        >Vercel Edge Network Cache</a
-      >, so you can configure routing exactly as your application needs. For
-      example, this template uses <code>middleware.js</code> defined in the root
-      of the repository to add additional security headers to the site:
-    </p>
-    <pre><code>referrer-policy: origin-when-cross-origin
-strict-transport-security: max-age=31536000; includeSubDomains; preload
-x-content-type-options: nosniff
-x-dns-prefetch-control: on
-x-frame-options: DENY</code></pre>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/functions/edge-middleware"
-        >Vercel Edge Middleware</a
-      >.
-    </p>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Track Your Sleep - PulsePals</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Times New Roman', Times, serif;
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .logo {
+      width: 150px;
+      margin-bottom: 10px;
+    }
+
+    .header h1 {
+      font-family: 'Times New Roman', Times, serif;
+      color: #003366;
+    }
+
+    .header p {
+      font-size: 1.2em;
+      color: #666;
+      font-family: 'Great Vibes', cursive;
+    }
+
+    .content {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .form-container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      background-color: #cfe2ff;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      color: #003366;
+    }
+
+    input[type="number"],
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #003366;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      border: none;
+      transition: background-color 0.3s ease;
+      text-align: center;
+    }
+
+    .btn:hover {
+      background-color: #001a33;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      &#10084; <!-- Heart Icon -->
+      <h1>PulsePals</h1>
+      <p>Your Health Companion</p>
+    </div>
+    <div class="content">
+      <div class="form-container">
+        <h2>Track Your Sleep Patterns</h2>
+        <form id="sleepForm">
+          <label for="sleepHours">Hours of Sleep:</label>
+          <input type="number" id="sleepHours" name="sleepHours" required><br><br>
+
+          <label for="sleepQuality">Quality of Sleep (1-10):</label>
+          <input type="number" id="sleepQuality" name="sleepQuality" min="1" max="10" required><br><br>
+
+          <label for="wakeTimes">Number of Times You Woke Up:</label>
+          <input type="number" id="wakeTimes" name="wakeTimes" required><br><br>
+
+          <label for="difficultySleeping">Difficulty Falling Asleep (1-10):</label>
+          <input type="number" id="difficultySleeping" name="difficultySleeping" min="1" max="10" required><br><br>
+
+          <label for="notes">Additional Notes:</label>
+          <textarea id="notes" name="notes" rows="4" placeholder="Any additional comments or observations..."></textarea><br><br>
+
+          <button type="submit" class="btn">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <style>
+  .cloud {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #003366;
+    margin-bottom: 20px;
+    color: white;
+  }
+  </style>
+
+  <style>
+  .cloud a {
+    color: #FFD700; /* Gold color for better visibility */
+  }
+    
+  .cloud a:visited {
+    color: #FFD700; /* Gold color for visited links */
+  }
+  </style>
+
+  <div id="sleepAnalysis1" style="display: none;">
+    <div class="container">
+      <div class="header">
+        <h1>Great Sleep!</h1>
+        <p id="sleepAnalysis1-user-name">Your sleep patterns indicate good quality rest.</p>
+      </div>
+      <div class="content">
+        <div class="cloud">
+            <h2 id="user-sleep-hours1">You slept for 8 hours</h2>
+            <p>Your sleep quality score is 9/10.</p>
+        </div>
+        <div class="cloud">
+            <p>Good sleep patterns contribute to better overall health, improved mood, and enhanced cognitive function.</p>
+        </div>
+        <div class="cloud">
+            <h2>Tips to Maintain Good Sleep:</h2>
+            <p>1. Keep a consistent sleep schedule.</p>
+            <p>2. Create a relaxing bedtime routine.</p>
+            <p>3. Ensure your sleep environment is comfortable and free from disruptions.</p>
+            <p>4. Limit exposure to screens before bedtime.</p>
+        </div>
+        <div class="cloud">
+            <h2>Learn More About Sleep Health:</h2>
+            <p>Visit <a href="https://www.healthline.com/nutrition/17-tips-to-sleep-better" target="_blank">"17 Tips to Sleep Better at Night"</a> for more information.</p>
+        </div>
+      <div class="cloud">
+        <a href="#" class="btn">Keep Tracking Your Sleep</a>
+      </div>
+      <div class="testimonials">
+        <h2>Sleep Success Stories</h2>
+        <div class="testimonial">
+          <p>"Tracking my sleep with PulsePals has significantly improved my rest!" - John Doe</p>
+        </div>
+        <div class="testimonial">
+          <p>"I've learned so much about my sleep patterns and how to improve them." - Jane Smith</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="sleepAnalysis2" style="display: none;">
+    <div class="container">
+      <div class="header">
+        <h1>Improve Your Sleep</h1>
+        <p id="sleepAnalysis2-user-name">Your sleep patterns suggest there is room for improvement.</p>
+      </div>
+      <div class="content">
+        <div class="cloud">
+            <h2 id="user-sleep-hours2">You slept for 5 hours</h2>
+            <p>Your sleep quality score is 5/10.</p>
+        </div>
+        <div class="cloud">
+            <p>Improving your sleep can lead to better health, mood, and productivity.</p>
+        </div>
+        <div class="cloud">
+            <h2>Tips to Improve Your Sleep:</h2>
+            <p>1. Maintain a regular sleep schedule, even on weekends.</p>
+            <p>2. Create a calming pre-sleep routine, such as reading or taking a warm bath.</p>
+            <p>3. Make your bedroom a sleep-friendly environment: dark, quiet, and cool.</p>
+            <p>4. Avoid caffeine and heavy meals close to bedtime.</p>
+        </div>
+        <div class="cloud">
+            <h2>Learn More About Improving Sleep:</h2>
+            <p>Check out this article on <a href="https://www.sleepfoundation.org/sleep-hygiene" target="_blank">"Sleep Hygiene Practices"</a> for more tips.</p>
+        </div>
+      <div class="cloud">
+        <a href="#" class="btn">Track Your Sleep Again</a>
+      </div>
+      <div class="testimonials">
+        <h2>Community Tips</h2>
+        <div class="testimonial">
+          <p>"PulsePals' tips helped me improve my sleep quality over time." - John Doe</p>
+        </div>
+        <div class="testimonial">
+          <p>"Understanding my sleep patterns has been a game-changer for my health." - Jane Smith</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('sleepForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      
+      const sleepHours = parseInt(document.getElementById('sleepHours').value);
+      const sleepQuality = parseInt(document.getElementById('sleepQuality').value);
+      const wakeTimes = parseInt(document.getElementById('wakeTimes').value);
+      const difficultySleeping = parseInt(document.getElementById('difficultySleeping').value);
+      const notes = document.getElementById('notes').value;
+      
+      // Basic sleep analysis logic
+      if (sleepHours >= 7 && sleepHours <= 9 && sleepQuality >= 7 && wakeTimes <= 1 && difficultySleeping <= 3) {
+        document.getElementById('sleepAnalysis1').style.display = 'block';
+        document.getElementById('user-sleep-hours1').innerText = `You slept for ${sleepHours} hours`;
+      } else {
+        document.getElementById('sleepAnalysis2').style.display = 'block';
+        document.getElementById('user-sleep-hours2').innerText = `You slept for ${sleepHours} hours`;
+      }
+    });
+  </script>
+</body>
+
 </html>
