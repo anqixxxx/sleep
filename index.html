@@ -186,7 +186,7 @@
       <div class="content">
         <div class="cloud">
           <h2 id="user-sleep-hours1">You slept for 8 hours</h2>
-          <p id="sleepQualityScore">Your sleep quality score is 9/10.</p>
+          <p id="sleepQualityScore1">Your sleep quality score is 9/10.</p>
         </div>
         <div class="cloud">
           <p>Good sleep patterns contribute to better overall health, improved mood, and enhanced cognitive function.</p>
@@ -227,7 +227,7 @@
       <div class="content">
         <div class="cloud">
           <h2 id="user-sleep-hours2">You slept for 5 hours</h2>
-          <p id="sleepQualityScore">Your sleep quality score is 5/10.</p>
+          <p id="sleepQualityScore2">Your sleep quality score is 5/10.</p>
         </div>
         <div class="cloud">
           <p>Improving your sleep can lead to better health, mood, and productivity.</p>
@@ -384,12 +384,12 @@
       if (totalScore >= 15) {
         // Good sleep analysis
         document.getElementById('sleepAnalysis1').style.display = 'block';
-        document.getElementById('sleepQualityScore').textContent = `Your sleep quality score is ${totalScore}/20`;
+        document.getElementById('sleepQualityScore1').textContent = `Your sleep quality score is ${totalScore}/20`;
         document.getElementById('user-sleep-hours1').textContent = `You slept for ${sleepHours} hours`;
       } else {
         // Poor sleep analysis
         document.getElementById('sleepAnalysis2').style.display = 'block';
-        document.getElementById('sleepQualityScore').textContent = `Your sleep quality score is ${totalScore}/20`;
+        document.getElementById('sleepQualityScore2').textContent = `Your sleep quality score is ${totalScore}/20`;
         document.getElementById('user-sleep-hours2').textContent = `You slept for ${sleepHours} hours`;
       }
 
