@@ -115,6 +115,7 @@
 
           <label for="sleepQuality">Quality of Sleep (1-10):</label>
           <a href="#" id="elaborationLink">Click here for elaboration</a>
+          <input type="number" id="sleepQuality" name="sleepQuality" min="1" max="10" required><br><br>
           <div id="elaboration" style="display: none;">
             <p>1-3: Very poor<br>
             Significant disruptions or discomfort throughout the night</p>
@@ -124,7 +125,6 @@
             Satisfactory sleep quality, where the user experiences restful sleep with minimal disturbances</p>
             <p>9-10: Excellent<br>
             Optimal sleep quality, where the user experiences uninterrupted, deeply restorative sleep</p>
-            <input type="number" id="sleepQuality" name="sleepQuality" min="1" max="10" required><br><br>
           </div>
           <br><br>
 
@@ -133,18 +133,18 @@
 
           <label for="difficultySleeping">Difficulty Falling Asleep (1-5):</label>
           <a href="#" id="difficultyElaborationLink">Click here for elaboration</a>
-          <div id="difficultyElaboration" style="display: none;">
-          <p>1: Not difficult at all<br>
-          Example: You drifted off within a few minutes of getting into bed.</p>
-          <p>2: Slightly difficult<br>
-          Example: It took a little longer than usual to fall asleep, about 5-10 minutes of restlessness.</p>
-          <p>3: Moderately difficult<br>
-          Example: You tossed and turned for some time before finally falling asleep, around 15-30 minutes.</p>
-          <p>4: Very difficult<br>
-          Example: You struggled to relax and initiate sleep, taking about 30-45 minutes.</p>
-          <p>5: Extremely difficult<br>
-          Example: You were awake for a prolonged period, unable to fall asleep despite trying, for over an hour.</p>
           <input type="number" id="difficultySleeping" name="difficultySleeping" min="1" max="5" required><br><br>
+          <div id="difficultyElaboration" style="display: none;">
+            <p>1: Not difficult at all<br>
+            Example: You drifted off within a few minutes of getting into bed.</p>
+            <p>2: Slightly difficult<br>
+            Example: It took a little longer than usual to fall asleep, about 5-10 minutes of restlessness.</p>
+            <p>3: Moderately difficult<br>
+            Example: You tossed and turned for some time before finally falling asleep, around 15-30 minutes.</p>
+            <p>4: Very difficult<br>
+            Example: You struggled to relax and initiate sleep, taking about 30-45 minutes.</p>
+            <p>5: Extremely difficult<br>
+            Example: You were awake for a prolonged period, unable to fall asleep despite trying, for over an hour.</p>
           </div>
           
           <label for="notes">Additional Notes:</label>
