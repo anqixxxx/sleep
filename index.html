@@ -316,6 +316,58 @@
       const wakeTimes = parseInt(document.getElementById('wakeTimes').value);
       const difficultySleeping = parseInt(document.getElementById('difficultySleeping').value);
       const notes = document.getElementById('notes').value;
+
+      function sleepHoursScore(sleepHours) {
+        if (sleepHours >= 7 && sleepHours <= 9) {
+          return 5;
+        } else if ((sleepHours >= 6 && sleepHours < 7) || (sleepHours > 9 && sleepHours <= 10)) {
+          return 3;
+        } else {
+          return 1;
+        }
+      }
+
+      // Function to calculate sleep quality score
+      function sleepQualityScore(sleepQuality) {
+        if (sleepQuality >= 9) {
+          return 5;
+        } else if (sleepQuality >= 7) {
+          return 4;
+        } else if (sleepQuality >= 5) {
+          return 3;
+        } else if (sleepQuality >= 3) {
+          return 2;
+        } else {
+          return 1;
+        }
+      }
+
+      // Function to calculate wake times score
+      function wakeTimesScore(wakeTimes) {
+        if (wakeTimes <= 1) {
+          return 5;
+        } else if (wakeTimes <= 3) {
+          return 3;
+        } else {
+          return 1;
+        }
+      }
+
+      // Function to calculate difficulty sleeping score
+      function difficultySleepingScore(difficultySleeping) {
+        if (difficultySleeping === 1) {
+          return 5;
+        } else if (difficultySleeping === 2) {
+          return 4;
+        } else if (difficultySleeping === 3) {
+          return 3;
+        } else if (difficultySleeping === 4) {
+          return 2;
+        } else {
+          return 1;
+        }
+      }
+
       const totalScore = sleepHoursScore(sleepHours) + sleepQualityScore(sleepQuality) + wakeTimesScore(wakeTimes) + difficultySleepingScore(difficultySleeping);
 
       // Validation Check
@@ -323,7 +375,7 @@
         alert('Please enter a valid number of sleep hours (0-24).');
         return;
       }
-      
+
       // Hide previous analysis if any
       document.getElementById('sleepAnalysis1').style.display = 'none';
       document.getElementById('sleepAnalysis2').style.display = 'none';
@@ -332,12 +384,12 @@
       if (totalScore >= 15) {
         // Good sleep analysis
         document.getElementById('sleepAnalysis1').style.display = 'block';
-        document.getElementById('sleepQualityScore').textContent = `Your sleep quality score is ${totalScore}/10`;
+        document.getElementById('sleepQualityScore').textContent = `Your sleep quality score is ${totalScore}/20`;
         document.getElementById('user-sleep-hours1').textContent = `You slept for ${sleepHours} hours`;
       } else {
         // Poor sleep analysis
         document.getElementById('sleepAnalysis2').style.display = 'block';
-        document.getElementById('sleepQualityScore').textContent = `Your sleep quality score is ${totalScore}/10`;
+        document.getElementById('sleepQualityScore').textContent = `Your sleep quality score is ${totalScore}/20`;
         document.getElementById('user-sleep-hours2').textContent = `You slept for ${sleepHours} hours`;
       }
 
