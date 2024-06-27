@@ -216,6 +216,45 @@
         </div>
       </div>
     </div>
+      <div id="sleepAnalysis1" class="analysis-container">
+    <div class="container">
+      <div class="header">
+        <h1>Great Sleep!</h1>
+        <p id="sleepAnalysis1-user-name">Your sleep patterns indicate good quality rest.</p>
+      </div>
+      <div class="content">
+        <div class="cloud">
+          <h2 id="user-sleep-hours1">You slept for 8 hours</h2>
+          <p id="sleepQualityScore1">Your sleep quality score is 9/10.</p>
+        </div>
+        <div class="cloud">
+          <p>Good sleep patterns contribute to better overall health, improved mood, and enhanced cognitive function.</p>
+        </div>
+        <div class="cloud">
+          <h2>Tips to Maintain Good Sleep:</h2>
+          <p>1. Keep a consistent sleep schedule.</p>
+          <p>2. Create a relaxing bedtime routine.</p>
+          <p>3. Ensure your sleep environment is comfortable and free from disruptions.</p>
+          <p>4. Limit exposure to screens before bedtime.</p>
+        </div>
+        <div class="cloud">
+          <h2>Learn More About Sleep Health:</h2>
+          <p>Visit <a href="https://www.healthline.com/nutrition/17-tips-to-sleep-better" target="_blank">"17 Tips to Sleep Better at Night"</a> for more information.</p>
+        </div>
+        <div class="cloud">
+          <a href="#" class="btn">Keep Tracking Your Sleep</a>
+        </div>
+        <div class="testimonials">
+          <h2>Sleep Success Stories</h2>
+          <div class="testimonial">
+            <p>"Tracking my sleep with PulsePals has significantly improved my rest!" - John Doe</p>
+          </div>
+          <div class="testimonial">
+            <p>"I've learned so much about my sleep patterns and how to improve them." - Jane Smith</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div id="sleepAnalysis2" class="analysis-container">
@@ -257,6 +296,49 @@
         </div>
       </div>
     </div>
+    <button id="logoutButton1" class="logout-button">Logout</button>
+  </div>
+
+  <div id="sleepAnalysis2" class="analysis-container">
+    <div class="container">
+      <div class="header">
+        <h1>Improve Your Sleep</h1>
+        <p id="sleepAnalysis2-user-name">Your sleep patterns suggest there is room for improvement.</p>
+      </div>
+      <div class="content">
+        <div class="cloud">
+          <h2 id="user-sleep-hours2">You slept for 5 hours</h2>
+          <p id="sleepQualityScore2">Your sleep quality score is 5/10.</p>
+        </div>
+        <div class="cloud">
+          <p>Improving your sleep can lead to better health, mood, and productivity.</p>
+        </div>
+        <div class="cloud">
+          <h2>Tips to Improve Your Sleep:</h2>
+          <p>1. Maintain a regular sleep schedule, even on weekends.</p>
+          <p>2. Create a calming pre-sleep routine, such as reading or taking a warm bath.</p>
+          <p>3. Make your bedroom a sleep-friendly environment: dark, quiet, and cool.</p>
+          <p>4. Avoid caffeine and heavy meals close to bedtime.</p>
+        </div>
+        <div class="cloud">
+          <h2>Learn More About Improving Sleep:</h2>
+          <p>Check out this article on <a href="https://www.sleepfoundation.org/sleep-hygiene" target="_blank">"Sleep Hygiene Practices"</a> for more tips.</p>
+        </div>
+        <div class="cloud">
+          <a href="#" class="btn">Track Your Sleep Again</a>
+        </div>
+        <div class="testimonials">
+          <h2>Community Tips</h2>
+          <div class="testimonial">
+            <p>"PulsePals' tips helped me improve my sleep quality over time." - John Doe</p>
+          </div>
+          <div class="testimonial">
+            <p>"Understanding my sleep patterns has been a game-changer for my health." - Jane Smith</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button id="logoutButton2" class="logout-button">Logout</button>
   </div>
 
   <script>
@@ -395,6 +477,22 @@
 
       // Clear form inputs after submission
       document.getElementById('sleepForm').reset();
+
+      document.getElementById('logoutButton1').addEventListener('click', function() {
+        firebase.auth().signOut().then(() => {
+          window.location.href = 'https://logout-ggsh0ps0d-anqis-projects-d8885076.vercel.app/';
+        }).catch((error) => {
+          console.error('Error signing out:', error);
+        });
+      });
+
+      document.getElementById('logoutButton1').addEventListener('click', function() {
+        firebase.auth().signOut().then(() => {
+          window.location.href = 'https://logout-ggsh0ps0d-anqis-projects-d8885076.vercel.app/';
+        }).catch((error) => {
+          console.error('Error signing out:', error);
+        });
+      });
     });
   </script>
 </body>
