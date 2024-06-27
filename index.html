@@ -203,7 +203,7 @@
           <p>Visit <a href="https://www.healthline.com/nutrition/17-tips-to-sleep-better" target="_blank">"17 Tips to Sleep Better at Night"</a> for more information.</p>
         </div>
         <div class="cloud">
-          <button id="logoutButton" class="btn">Logout</button>
+          <button id="logoutButton1" class="btn">Logout</button>
         </div>
         <div class="testimonials">
           <h2>Sleep Success Stories</h2>
@@ -244,7 +244,7 @@
           <p>Check out this article on <a href="https://www.sleepfoundation.org/sleep-hygiene" target="_blank">"Sleep Hygiene Practices"</a> for more tips.</p>
         </div>
         <div class="cloud">
-          <button id="logoutButton" class="btn">Logout</button>
+          <button id="logoutButton2" class="btn">Logout</button>
         </div>
         <div class="testimonials">
           <h2>Community Tips</h2>
@@ -404,7 +404,7 @@
         });
       });
 
-      document.getElementById('logoutButton1').addEventListener('click', function() {
+      document.getElementById('logoutButton2').addEventListener('click', function() {
         firebase.auth().signOut().then(() => {
           window.location.href = 'https://logout-ggsh0ps0d-anqis-projects-d8885076.vercel.app/';
         }).catch((error) => {
