@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Track Your Sleep - PulsePals</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
   <style>
     body {
@@ -96,6 +97,43 @@
       display: none;
     }
   </style>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+    import { getAuth, signOut } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyDf4yaXsG9ShvlAX4IVdGIPqPAypttqlPI",
+      authDomain: "pulsepals-fa684.firebaseapp.com",
+      projectId: "pulsepals-fa684",
+      storageBucket: "pulsepals-fa684.appspot.com",
+      messagingSenderId: "332323808828",
+      appId: "1:332323808828:web:926868c9d76ab22a8ac539",
+      measurementId: "G-ZLJM10C0BD"      
+  };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    // Funtion for logout
+    function handleLogout() {
+      signOut(auth).then(() => {
+        window.location.href = 'https://logout-ggsh0ps0d-anqis-projects-d8885076.vercel.app/';
+      }).catch((error) => {
+        console.error('Error signing out:', error);
+      });
+    }
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+      // Add event listener to logout button
+      document.getElementById('logoutButton1').addEventListener('click', handleLogout);
+      document.getElementById('logoutButton2').addEventListener('click', handleLogout);
+    });
+
+  </script>
 </head>
 
 
@@ -395,25 +433,9 @@
 
       // Clear form inputs after submission
       document.getElementById('sleepForm').reset();
-
-      document.getElementById('logoutButton1').addEventListener('click', function() {
-        firebase.auth().signOut().then(() => {
-          window.location.href = 'https://logout-ggsh0ps0d-anqis-projects-d8885076.vercel.app/';
-        }).catch((error) => {
-          console.error('Error signing out:', error);
-        });
-      });
-
-      document.getElementById('logoutButton2').addEventListener('click', function() {
-        firebase.auth().signOut().then(() => {
-          window.location.href = 'https://logout-ggsh0ps0d-anqis-projects-d8885076.vercel.app/';
-        }).catch((error) => {
-          console.error('Error signing out:', error);
-        });
-      });
     });
+
   </script>
 </body>
 
 </html>
-
