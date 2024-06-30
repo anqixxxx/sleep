@@ -342,10 +342,20 @@
       }
     }
 
-    function difficultySleepingScore(difficultySleeping) {
-     return 6 - difficultySleeping; // Assuming difficultySleeping is a number between 1 and 5
+    function sleepQualityScore(sleepQuality) {
+      if (sleepQuality >= 9) {
+          return 5;
+      } else if (sleepQuality >= 7) {
+          return 4;
+      } else if (sleepQuality >= 5) {
+          return 3;
+      } else if (sleepQuality >= 3) {
+          return 2;
+      } else {
+          return 1;
+      }
     }
-
+    
     document.getElementById('sleepForm').addEventListener('submit', function (e) {
       e.preventDefault();
 
