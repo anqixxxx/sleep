@@ -120,6 +120,8 @@
     // Funtion for logout
     function handleLogout() {
       signOut(auth).then(() => {
+        // Clear local storage
+        localStorage.clear();
         window.location.href = 'https://logout-eight.vercel.app';
       }).catch((error) => {
         console.error('Error signing out:', error);
