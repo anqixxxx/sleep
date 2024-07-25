@@ -98,44 +98,39 @@
     }
   </style>
 
-  <script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
-    import { getAuth, signOut } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
-
-    // Your web app's Firebase configuration
-    const firebaseConfig = {
-      apiKey: "AIzaSyAo6ziHFthGBRE3cZd8EC-Ukds8ztyMzFQ",
-      authDomain: "pulsepals-c211c.firebaseapp.com",
-      projectId: "pulsepals-c211c",
-      storageBucket: "pulsepals-c211c.appspot.com",
-      messagingSenderId: "475129408953",
-      appId: "1:475129408953:web:1913c2d4083c1452079a68",
-      measurementId: "G-YPSX5VFFG5"
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script>
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyDf4yaXsG9ShvlAX4IVdGIPqPAypttqlPI",
+    authDomain: "pulsepals-fa684.firebaseapp.com",
+    projectId: "pulsepals-fa684",
+    storageBucket: "pulsepals-fa684.appspot.com",
+    messagingSenderId: "332323808828",
+    appId: "1:332323808828:web:926868c9d76ab22a8ac539",
+    measurementId: "G-ZLJM10C0BD"
   };
 
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const auth = getAuth(app);
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const auth = firebase.auth();
 
-    // Funtion for logout
-    function handleLogout() {
-      signOut(auth).then(() => {
-        // Clear local storage
-        localStorage.clear();
-        window.location.href = 'https://logout-eight.vercel.app';
-      }).catch((error) => {
-        console.error('Error signing out:', error);
-      });
-    }
-
-
-    document.addEventListener('DOMContentLoaded', function() {
-      // Add event listener to logout button
-      document.getElementById('logoutButton1').addEventListener('click', handleLogout);
-      document.getElementById('logoutButton2').addEventListener('click', handleLogout);
+  // Function for logout
+  function handleLogout() {
+    auth.signOut().then(() => {
+      window.location.href = 'https://logout-ggsh0ps0d-anqis-projects-d8885076.vercel.app/';
+    }).catch((error) => {
+      console.error('Error signing out:', error);
     });
+  }
 
-  </script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Add event listener to logout button
+    document.getElementById('logoutButton1').addEventListener('click', handleLogout);
+    document.getElementById('logoutButton2').addEventListener('click', handleLogout);
+  });
+</script>
 </head>
 
 
